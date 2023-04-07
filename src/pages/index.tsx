@@ -1,7 +1,7 @@
-import { Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import { About } from '@/components/about/about';
 import { Contact } from '@/components/contact';
-import { Projects } from '@/components/projects';
+import { Projects } from '@/components/projects/projects';
 import { Home } from '@/components/home';
 
 const Index = () => {
@@ -11,7 +11,9 @@ const Index = () => {
 
       <About />
 
-      <Projects />
+      <Box>
+        <Projects />
+      </Box>
 
       <Contact />
     </Stack>

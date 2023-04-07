@@ -7,7 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Fragment, useEffect, useState } from 'react';
 
-import Initials from '../../../public/initials.svg';
+import Initials from '../../../public/images/initials.svg';
 
 interface TextLinkProps {
   id: string;
@@ -64,16 +64,25 @@ export const Navbar = () => {
                   justifyContent: 'space-between',
                 }}
               >
-                <Initials
-                  onClick={() => scrollTo('home')}
-                  height={atRoot ? '70' : '50'}
-                  width="100"
-                  fill="white"
-                  stroke="white"
-                  style={{ cursor: 'pointer' }}
-                />
+                <Flex sx={{ display: { xs: 'none', md: 'block' } }}>
+                  <Initials
+                    onClick={() => scrollTo('home')}
+                    height={atRoot ? '70' : '50'}
+                    width="100%"
+                    fill="white"
+                    stroke="white"
+                    style={{ cursor: 'pointer' }}
+                  />
+                </Flex>
 
-                <Flex sx={{ ml: 3, gap: 6 }}>
+                <Flex
+                  sx={{
+                    ml: 3,
+                    gap: 6,
+                    width: '100%',
+                    justifyContent: { xs: 'space-between', md: 'flex-end' },
+                  }}
+                >
                   <TextLink id={'about'} />
 
                   <TextLink id={'projects'} />

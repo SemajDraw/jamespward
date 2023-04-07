@@ -6,13 +6,14 @@ import Banner from '../../public/images/banner.jpg';
 
 export const Home = () => {
   return (
-    <Flex sx={{ height: '100vh' }}>
+    <Flex id="home" sx={{ height: '100vh' }}>
       <Image
         src={Banner}
         alt="banner"
         style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
         fill
       />
+
       <Flex
         sx={{
           height: '100%',
@@ -22,8 +23,9 @@ export const Home = () => {
           opacity: 0.3,
           zIndex: 1,
         }}
-      ></Flex>
-      <Container maxWidth="lg" id="home" sx={{ height: '100vh', zIndex: 2 }}>
+      />
+
+      <Container maxWidth="lg" sx={{ height: '100vh', zIndex: 2 }}>
         <Toolbar sx={{ height: '100px' }} />
         <Flex sx={{ height: 'calc(100% - 100px)', width: '100%' }}>
           <Flex
@@ -46,7 +48,7 @@ export const Home = () => {
               variant="h3"
               sx={{ color: 'white.main', fontWeight: 600 }}
             >
-              {`I am James Ward`}
+              {`I'm James Ward`}
             </Typography>
             <Typography
               variant="h3"

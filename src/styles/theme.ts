@@ -22,7 +22,7 @@ export const theme = createTheme({
       main: '#3D405B',
     },
     orange: {
-      main: '#E07A5F',
+      main: '#CF8918',
     },
     green: {
       main: '#81B29A',
