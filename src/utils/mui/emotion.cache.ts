@@ -1,6 +1,6 @@
-import createCache from "@emotion/cache";
+import createCache from '@emotion/cache';
 
-const isBrowser = typeof document !== "undefined";
+const isBrowser = typeof document !== 'undefined';
 
 export const createEmotionCache = () => {
   let insertionPoint;
@@ -12,5 +12,5 @@ export const createEmotionCache = () => {
     insertionPoint = emotionInsertionPoint ?? undefined;
   }
 
-  return createCache({ key: "mui-style", insertionPoint });
+  return createCache({ key: 'mui-style', insertionPoint });
 };

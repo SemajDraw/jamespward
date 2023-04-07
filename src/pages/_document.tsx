@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import Document, {
   Html,
   Head,
@@ -6,12 +6,12 @@ import Document, {
   NextScript,
   DocumentProps,
   DocumentContext,
-} from "next/document";
-import { AppType } from "next/app";
-import { theme } from "@/styles/theme";
-import { AppProps } from "@/pages/_app";
-import { createEmotionCache } from "@/utils/mui/emotion.cache";
-import createEmotionServer from "@emotion/server/create-instance";
+} from 'next/document';
+import { AppType } from 'next/app';
+import { theme } from '@/styles/theme';
+import { AppProps } from '@/pages/_app';
+import { createEmotionCache } from '@/utils/mui/emotion.cache';
+import createEmotionServer from '@emotion/server/create-instance';
 
 interface MyDocumentProps extends DocumentProps {
   emotionStyleTags: JSX.Element[];
@@ -54,7 +54,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style: any) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(" ")}`}
+      data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}

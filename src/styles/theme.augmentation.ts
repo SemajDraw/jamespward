@@ -1,9 +1,9 @@
 import {
   ColorPartial,
   SimplePaletteColorOptions,
-} from "@mui/material/styles/createPalette";
+} from '@mui/material/styles/createPalette';
 
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
   interface Palette {
     orange?: SimplePaletteColorOptions;
     green?: SimplePaletteColorOptions;
