@@ -80,7 +80,12 @@ export const ParallaxLayer = (props: ParallaxLayerProps) => {
         >
           {body}
         </Typography>
-        <Link href={link} target="_blank" rel="noopener noreferrer">
+        <Link
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          underline="none"
+        >
           <Button
             variant="outlined"
             sx={{

@@ -55,7 +55,10 @@ export const Contact = () => {
               }}
             >
               <Flex sx={{ pl: 6, height: '100%', alignItems: 'flex-start' }}>
-                <Link href="https://www.linkedin.com/in/james--ward/">
+                <Link
+                  href="https://www.linkedin.com/in/james--ward/"
+                  underline="none"
+                >
                   <Flex sx={{ gap: 4, alignItems: 'center' }}>
                     <Box sx={{ height: '45px', width: '45px' }}>
                       <LinkedIn sx={{ height: '100%', width: '100%' }} />
@@ -76,7 +79,7 @@ export const Contact = () => {
               </Flex>
 
               <Flex sx={{ pl: 6, height: '100%', alignItems: 'flex-start' }}>
-                <Link href="mailto:jameswsoftware@gmail.com">
+                <Link href="mailto:jameswsoftware@gmail.com" underline="none">
                   <Flex sx={{ gap: 4, alignItems: 'center' }}>
                     <Box sx={{ height: '45px', width: '45px' }}>
                       <Email height="45px" width="45px" />
@@ -93,7 +96,7 @@ export const Contact = () => {
               </Flex>
 
               <Flex sx={{ pl: 6, height: '100%', alignItems: 'flex-start' }}>
-                <Link href="https://github.com/SemajDraw">
+                <Link href="https://github.com/SemajDraw" underline="none">
                   <Flex sx={{ gap: 4, alignItems: 'center' }}>
                     <Box sx={{ height: '45px', width: '45px' }}>
                       <Github height="45px" width="45px" />
