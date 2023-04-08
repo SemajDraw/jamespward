@@ -77,7 +77,7 @@ export const Navbar = () => {
 
                 <Flex
                   sx={{
-                    ml: 3,
+                    ml: { xs: 0, md: 3 },
                     gap: 6,
                     width: '100%',
                     justifyContent: { xs: 'space-between', md: 'flex-end' },

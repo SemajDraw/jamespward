@@ -1,11 +1,15 @@
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { ParallaxLayer } from './parallax-layer';
 
 export const Projects = () => {
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Box id="projects" sx={{ width: '100vw', height: '100%' }}>
       <ParallaxLayer
-        img="/images/posee.png"
+        img={isMobile ? '/images/posee-mobile.png' : '/images/posee.png'}
         title="P.OSEE"
         body="The future of B2B sales"
         button="Visit Site"
@@ -13,7 +17,9 @@ export const Projects = () => {
       />
 
       <ParallaxLayer
-        img="/images/macrobros.png"
+        img={
+          isMobile ? '/images/macrobros-mobile.png' : '/images/macrobros.png'
+        }
         title="MacroBros"
         body="Cryptocurrency blog website"
         button="View Code"
@@ -26,6 +32,7 @@ export const Projects = () => {
         body="Tailored live music event recommendations"
         button="View Code"
         link="https://github.com/SemajDraw/localgigs"
+        opacity={isMobile ? 1 : undefined}
       />
     </Box>
   );

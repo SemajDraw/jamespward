@@ -8,17 +8,22 @@ interface ParallaxLayerProps {
   body: string;
   button: string;
   link: string;
+  opacity?: number;
 }
 
 export const ParallaxLayer = (props: ParallaxLayerProps) => {
-  const { img, title, body, button, link } = props;
+  const { img, title, body, button, link, opacity } = props;
 
   return (
     <Parallax
       blur={0}
       bgImage={img}
       bgImageAlt="posee"
-      bgImageStyle={{ width: '100%', height: '100%' }}
+      bgImageStyle={{
+        width: '100%',
+        height: '100%',
+        backgroundPosition: 'center 0',
+      }}
       strength={600}
     >
       <Flex
@@ -27,7 +32,7 @@ export const ParallaxLayer = (props: ParallaxLayerProps) => {
           width: '100vw',
           position: 'absolute',
           background: 'black',
-          opacity: 0.4,
+          opacity: opacity || 0.4,
           zIndex: 0,
         }}
       />
