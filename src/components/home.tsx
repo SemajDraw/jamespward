@@ -1,7 +1,17 @@
-import { Container, Toolbar, Typography } from '@mui/material';
+import {
+  Container,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import { Flex } from './common/flex';
 
 export const Home = () => {
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Flex id="home" sx={{ height: '100vh' }}>
       <img
@@ -42,25 +52,25 @@ export const Home = () => {
             }}
           >
             <Typography
-              variant="h1"
+              variant={isMobile ? 'h2' : 'h1'}
               sx={{ mb: 2, color: 'white.main', fontWeight: 600 }}
             >
               Hello!
             </Typography>
             <Typography
-              variant="h3"
+              variant={isMobile ? 'h4' : 'h3'}
               sx={{ color: 'white.main', fontWeight: 600 }}
             >
               {`I'm James Ward`}
             </Typography>
             <Typography
-              variant="h3"
+              variant={isMobile ? 'h4' : 'h3'}
               sx={{ color: 'white.main', fontWeight: 600 }}
             >
               {`a software engineer`}
             </Typography>
             <Typography
-              variant="h3"
+              variant={isMobile ? 'h4' : 'h3'}
               sx={{ color: 'white.main', fontWeight: 600 }}
             >
               {`based in Dublin, Ireland.`}
