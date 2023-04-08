@@ -1,21 +1,25 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import Image from 'next/image';
 import { Flex } from './common/flex';
 
-import LinkedIn from '../../public/images/linkedin.svg';
 import Email from '../../public/images/email.svg';
-import Sky from '../../public/images/sky.jpg';
 import Github from '../../public/images/github.svg';
+import LinkedIn from '../../public/images/linkedin.svg';
 import { Link } from './common/link';
 
 export const Contact = () => {
   return (
     <Flex id="contact" sx={{ height: '70vh', position: 'relative' }}>
-      <Image
-        src={Sky}
+      <img
+        src={'/images/sky.jpg'}
         alt="sky"
-        style={{ objectFit: 'cover', objectPosition: 'center' }}
-        fill
+        height="100%"
+        width="100%"
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center',
+          position: 'absolute',
+          zIndex: 0,
+        }}
       />
 
       <Flex

@@ -1,17 +1,20 @@
 import { Container, Toolbar, Typography } from '@mui/material';
-import Image from 'next/image';
 import { Flex } from './common/flex';
-
-import Banner from '../../public/images/banner.jpg';
 
 export const Home = () => {
   return (
     <Flex id="home" sx={{ height: '100vh' }}>
-      <Image
-        src={Banner}
+      <img
+        src={'/images/banner.jpg'}
         alt="banner"
-        style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
-        fill
+        height="100%"
+        width="100%"
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center',
+          position: 'absolute',
+          zIndex: 0,
+        }}
       />
 
       <Flex
